@@ -1,39 +1,142 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Thank You | GREAYSTONE</title>
-    <meta
-      name="description"
-      content="Thank you for contacting GREAYSTONE. We have received your inquiry and will get back to you soon."
-    />
-    <link rel="stylesheet" href="/src/thankyou.css" />
-  </head>
-  <body>
-    <main class="thankyou-page">
-      <div class="thankyou-card">
-        <img src="/logo.png" alt="GREAYSTONE logo" class="thankyou-logo" />
+:root {
+  --blue: #183567;
+  --blue-dark: #0c1731;
+  --gold: #f2d47b;
+  --text: #1f2937;
+  --muted: #64748b;
+  --white: #ffffff;
+}
 
-        <div class="thankyou-badge">Inquiry Submitted</div>
+* {
+  box-sizing: border-box;
+}
 
-        <h1>Thank You</h1>
+body {
+  margin: 0;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  background:
+    radial-gradient(circle at top right, rgba(242, 212, 123, 0.18), transparent 22%),
+    radial-gradient(circle at bottom left, rgba(255, 255, 255, 0.08), transparent 20%),
+    linear-gradient(135deg, #122246, #183567, #0c1731);
+  min-height: 100vh;
+}
 
-        <p>
-          We have received your inquiry successfully. Our team will review your
-          message and get back to you as soon as possible.
-        </p>
+a {
+  text-decoration: none;
+}
 
-        <div class="thankyou-contact">
-          <a href="https://wa.me/12137920548" target="_blank" rel="noreferrer">
-            Chat on WhatsApp
-          </a>
+.thankyou-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
 
-          <a href="/" class="back-home">
-            Back to Home
-          </a>
-        </div>
-      </div>
-    </main>
-  </body>
-</html>
+.thankyou-card {
+  width: min(700px, 100%);
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 34px;
+  padding: 52px 36px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.22);
+  text-align: center;
+}
+
+.thankyou-logo {
+  width: 74px;
+  height: 74px;
+  object-fit: contain;
+  margin: 0 auto 18px;
+  border-radius: 18px;
+  background: rgba(24, 53, 103, 0.04);
+  padding: 6px;
+}
+
+.thankyou-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(24, 53, 103, 0.08);
+  color: var(--blue);
+  border: 1px solid rgba(24, 53, 103, 0.12);
+  border-radius: 999px;
+  padding: 10px 16px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.thankyou-card h1 {
+  margin: 24px 0 0;
+  font-size: clamp(40px, 7vw, 64px);
+  line-height: 1;
+  color: #0f172a;
+  font-weight: 900;
+}
+
+.thankyou-card p {
+  margin: 24px auto 0;
+  max-width: 560px;
+  font-size: 18px;
+  line-height: 1.9;
+  color: var(--muted);
+}
+
+.thankyou-contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+  margin-top: 34px;
+}
+
+.thankyou-contact a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 24px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 800;
+  transition: 0.22s ease;
+}
+
+.thankyou-contact a:first-child {
+  background: #25d366;
+  color: white;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.16);
+}
+
+.thankyou-contact a:first-child:hover {
+  transform: translateY(-2px);
+}
+
+.back-home {
+  background: white;
+  color: var(--blue);
+  border: 1px solid #dbe2ea;
+}
+
+.back-home:hover {
+  background: #f8fafc;
+}
+
+@media (max-width: 640px) {
+  .thankyou-card {
+    padding: 38px 22px;
+    border-radius: 24px;
+  }
+
+  .thankyou-card p {
+    font-size: 16px;
+  }
+
+  .thankyou-contact {
+    flex-direction: column;
+  }
+
+  .thankyou-contact a {
+    width: 100%;
+  }
+}
