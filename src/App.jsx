@@ -224,16 +224,23 @@ export default function App() {
               </a>
             </div>
 
-            <div className="card-grid four-grid">
+            <div className="product-showcase-grid">
               {products.map((item) => (
-                <article className="product-card" key={item.title}>
+                <article className="product-card product-card-enhanced" key={item.title}>
                   <div className="product-image-wrap">
                     <img src={item.image} alt={item.title} className="product-image" />
                     <div className="product-tag">{item.tag}</div>
                   </div>
+
                   <div className="product-body">
                     <h3>{item.title}</h3>
                     <p>{item.desc}</p>
+
+                    <div className="product-meta">
+                      <span>Custom Support</span>
+                      <span>Project Supply</span>
+                    </div>
+
                     <a href="#contact" className="text-link small-link">
                       Ask for details →
                     </a>
@@ -256,12 +263,32 @@ export default function App() {
               </p>
             </div>
 
-            <div className="card-grid factory-grid">
-              {factoryItems.map((item, index) => (
-                <div
-                  key={item.title}
-                  className={`factory-card ${index === 0 ? "factory-card-wide" : ""}`}
-                >
+            <div className="factory-featured">
+              <div className="factory-featured-image">
+                <img src="/factory/factory1.jpg" alt="Factory featured view" />
+              </div>
+
+              <div className="factory-featured-text">
+                <div className="factory-mini-label">Production Capability</div>
+                <h3>From slab storage to machine processing, we work with real resources.</h3>
+                <p>
+                  Our website uses real workshop and warehouse photos to reflect the
+                  actual operating condition behind our supply. That matters for buyers
+                  who value consistency, production support, and practical execution.
+                </p>
+
+                <div className="factory-points">
+                  <div className="factory-point">Stone slab inventory support</div>
+                  <div className="factory-point">CNC and cutting capability</div>
+                  <div className="factory-point">Workshop-based custom fabrication</div>
+                  <div className="factory-point">Project-oriented material handling</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="factory-gallery-grid">
+              {factoryItems.map((item) => (
+                <div className="factory-card refined-factory-card" key={item.title}>
                   <img src={item.image} alt={item.title} />
                   <div className="factory-card-title">{item.title}</div>
                 </div>
@@ -382,7 +409,7 @@ export default function App() {
               <input
                 type="hidden"
                 name="_next"
-                value="https://your-vercel-domain.vercel.app/"
+                value="https://your-vercel-domain.vercel.app/thank-you.html"
               />
 
               <div className="form-head">
@@ -425,13 +452,25 @@ export default function App() {
         </section>
 
         <a
-          href="https://wa.me/12137920548"
+          href="https://wa.me/12137920548?text=Hello%20I%20am%20interested%20in%20your%20stone%20products.%20Could%20you%20please%20share%20more%20details%3F"
           target="_blank"
           rel="noreferrer"
-          className="whatsapp-float"
-          aria-label="Chat on WhatsApp"
+          className="whatsapp-float whatsapp-float-enhanced"
+          aria-label="Chat with us on WhatsApp"
         >
-          WhatsApp Us
+          <span className="whatsapp-icon-wrap">
+            <svg viewBox="0 0 32 32" className="whatsapp-icon" aria-hidden="true">
+              <path d="M19.11 17.33c-.28-.14-1.64-.81-1.89-.9-.25-.09-.43-.14-.61.14-.18.28-.7.9-.86 1.09-.16.19-.32.21-.6.07-.28-.14-1.16-.43-2.21-1.37-.82-.73-1.38-1.62-1.54-1.9-.16-.28-.02-.43.12-.57.13-.13.28-.32.42-.48.14-.16.18-.28.28-.46.09-.19.05-.35-.02-.49-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47h-.52c-.19 0-.49.07-.75.35-.26.28-.98.96-.98 2.33s1.01 2.68 1.15 2.86c.14.19 1.97 3 4.77 4.2.67.29 1.2.46 1.61.59.68.22 1.29.19 1.78.12.54-.08 1.64-.67 1.87-1.31.23-.64.23-1.19.16-1.31-.07-.12-.25-.19-.53-.33Z" />
+              <path d="M16.01 3.2c-7.07 0-12.8 5.72-12.8 12.77 0 2.24.59 4.43 1.71 6.35L3.1 28.8l6.65-1.74a12.82 12.82 0 0 0 6.25 1.61h.01c7.06 0 12.79-5.72 12.79-12.77 0-3.42-1.34-6.64-3.75-9.05A12.72 12.72 0 0 0 16.01 3.2Zm0 23.31h-.01a10.7 10.7 0 0 1-5.45-1.49l-.39-.23-3.95 1.03 1.06-3.84-.25-.39a10.58 10.58 0 0 1-1.63-5.67c0-5.9 4.82-10.7 10.74-10.7 2.87 0 5.57 1.11 7.59 3.12a10.6 10.6 0 0 1 3.15 7.58c0 5.9-4.82 10.69-10.86 10.69Z" />
+            </svg>
+          </span>
+
+          <span className="whatsapp-text-group">
+            <strong>WhatsApp</strong>
+            <small>Chat with us now</small>
+          </span>
+
+          <span className="whatsapp-badge">Online</span>
         </a>
       </main>
 
