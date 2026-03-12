@@ -50,9 +50,6 @@ img {
   position: sticky;
   top: 0;
   z-index: 1000;
-  backdrop-filter: blur(14px);
-  background: rgba(255, 255, 255, 0.8);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 }
 
 .site-header-overlay {
@@ -62,103 +59,49 @@ img {
   width: 100%;
   background: linear-gradient(
     180deg,
-    rgba(20, 38, 78, 0.26),
-    rgba(20, 38, 78, 0.04)
+    rgba(10, 18, 38, 0.22),
+    rgba(10, 18, 38, 0.03)
   );
   border-bottom: none;
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(3px);
   z-index: 1000;
 }
 
 .header-inner {
-  min-height: 82px;
+  min-height: 78px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
+  gap: 24px;
 }
 
 .brand {
   display: flex;
   align-items: center;
-  gap: 12px;
 }
 
-.brand-reference {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-
-.brand-logo {
-  width: 54px;
-  height: 54px;
-  object-fit: cover;
-  border-radius: 14px;
-  background: var(--gold);
-  padding: 4px;
-  box-shadow: var(--shadow);
-}
-
-.logo-natural {
-  width: 68px;
-  height: 68px;
+.logo-header {
+  height: 50px;
+  width: auto;
   object-fit: contain;
-  background: transparent;
-  border-radius: 14px;
-  padding: 0;
-  box-shadow: none;
-}
-
-.brand-name {
-  font-weight: 900;
-  letter-spacing: 0.16em;
-  color: var(--blue);
-  font-size: 22px;
-}
-
-.brand-name-light {
-  color: #ffffff;
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.26);
-}
-
-.brand-subtitle {
-  margin-top: 4px;
-  font-size: 10px;
-  letter-spacing: 0.32em;
-  text-transform: uppercase;
-  color: #6b7280;
-  font-weight: 700;
-}
-
-.brand-subtitle-light {
-  color: rgba(255, 255, 255, 0.82);
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.26);
+  display: block;
 }
 
 .desktop-nav {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 26px;
 }
 
 .desktop-nav a {
   font-size: 14px;
   font-weight: 700;
-  color: #374151;
+  color: rgba(255, 255, 255, 0.92);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.28);
   transition: 0.2s;
 }
 
 .desktop-nav a:hover {
-  color: var(--blue);
-}
-
-.desktop-nav-light a {
-  color: rgba(255, 255, 255, 0.92);
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.28);
-}
-
-.desktop-nav-light a:hover {
   color: #f2d47b;
 }
 
@@ -174,32 +117,21 @@ img {
 }
 
 .header-btn {
-  background: var(--blue);
-  color: white;
-  padding: 12px 20px;
-  border-radius: 999px;
-  font-size: 14px;
-  font-weight: 700;
-  box-shadow: var(--shadow);
-}
-
-.header-btn:hover {
-  transform: translateY(-1px);
-  background: #23447f;
-}
-
-.hero-header-btn {
   background: rgba(255, 255, 255, 0.16);
   border: 1px solid rgba(255, 255, 255, 0.16);
   color: #fff;
+  padding: 11px 20px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 700;
   box-shadow: none;
 }
 
-.hero-header-btn:hover {
+.header-btn:hover {
   background: rgba(255, 255, 255, 0.24);
 }
 
-/* Clean Hero */
+/* Hero */
 .hero-clean-section {
   position: relative;
   height: 100vh;
@@ -221,23 +153,23 @@ img {
   background:
     linear-gradient(
       180deg,
-      rgba(15, 31, 63, 0.26) 0%,
-      rgba(15, 31, 63, 0.10) 24%,
-      rgba(15, 31, 63, 0.00) 55%,
-      rgba(15, 31, 63, 0.10) 100%
+      rgba(9, 18, 36, 0.18) 0%,
+      rgba(9, 18, 36, 0.08) 20%,
+      rgba(9, 18, 36, 0.02) 48%,
+      rgba(9, 18, 36, 0.10) 100%
     ),
     linear-gradient(
       90deg,
-      rgba(15, 31, 63, 0.08) 0%,
-      rgba(15, 31, 63, 0.00) 45%,
+      rgba(9, 18, 36, 0.06) 0%,
+      rgba(9, 18, 36, 0.00) 42%,
       rgba(255, 255, 255, 0.00) 100%
     );
 }
 
-/* Intro panel after hero */
+/* Intro panel */
 .intro-panel-wrap {
   position: relative;
-  margin-top: -110px;
+  margin-top: -84px;
   z-index: 10;
   padding-bottom: 40px;
 }
@@ -245,14 +177,14 @@ img {
 .intro-panel {
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
-  gap: 34px;
+  gap: 32px;
   align-items: stretch;
-  padding: 42px;
-  border-radius: 40px;
-  background: rgba(255, 255, 255, 0.88);
-  border: 1px solid rgba(255, 255, 255, 0.78);
-  box-shadow: 0 30px 90px rgba(15, 31, 63, 0.14);
-  backdrop-filter: blur(20px);
+  padding: 36px;
+  border-radius: 34px;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  box-shadow: 0 24px 70px rgba(15, 31, 63, 0.12);
+  backdrop-filter: blur(14px);
 }
 
 .intro-panel-left {
@@ -303,8 +235,8 @@ img {
   margin: 0;
   max-width: 690px;
   color: #475569;
-  font-size: 19px;
-  line-height: 1.85;
+  font-size: 18px;
+  line-height: 1.8;
 }
 
 .hero-actions {
@@ -329,25 +261,15 @@ img {
 }
 
 .secondary-btn {
-  color: white;
+  color: #183567;
   padding: 14px 24px;
   border-radius: 999px;
-  border: 1px solid rgba(255,255,255,0.2);
-  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(24, 53, 103, 0.14);
+  background: #ffffff;
   font-weight: 700;
 }
 
 .secondary-btn:hover {
-  background: rgba(255,255,255,0.14);
-}
-
-.secondary-btn-dark {
-  color: #183567;
-  border: 1px solid rgba(24, 53, 103, 0.14);
-  background: #ffffff;
-}
-
-.secondary-btn-dark:hover {
   background: #f8fafc;
 }
 
@@ -364,16 +286,16 @@ img {
 }
 
 .intro-stat-card {
-  padding: 28px;
-  border-radius: 28px;
-  background: rgba(24, 53, 103, 0.06);
+  padding: 24px;
+  border-radius: 24px;
+  background: rgba(24, 53, 103, 0.05);
   border: 1px solid rgba(24, 53, 103, 0.08);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.65);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.58);
 }
 
 .intro-stat-value {
   color: var(--gold);
-  font-size: 40px;
+  font-size: 36px;
   font-weight: 900;
 }
 
@@ -418,7 +340,7 @@ img {
   line-height: 1.8;
 }
 
-/* Generic sections */
+/* Sections */
 .content-section {
   padding: 110px 0;
 }
@@ -719,7 +641,7 @@ img {
   gap: 20px;
 }
 
-.refined-factory-card {
+.factory-card {
   border-radius: 28px;
   overflow: hidden;
   background: #fff;
@@ -728,12 +650,12 @@ img {
   transition: 0.25s ease;
 }
 
-.refined-factory-card:hover {
+.factory-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 24px 50px rgba(15, 31, 63, 0.12);
 }
 
-.refined-factory-card img {
+.factory-card img {
   aspect-ratio: 4 / 4.2;
   object-fit: cover;
 }
@@ -782,7 +704,7 @@ img {
   padding: 24px;
 }
 
-/* CTA banner */
+/* CTA */
 .cta-banner-section {
   padding: 0 0 110px;
   background: #ffffff;
@@ -892,7 +814,7 @@ img {
   color: rgba(255,255,255,0.82);
 }
 
-/* Work style */
+/* Work */
 .work-grid {
   grid-template-columns: repeat(2, 1fr);
 }
@@ -1196,9 +1118,8 @@ img {
     padding: 0 0 84px;
   }
 
-  .logo-natural {
-    width: 56px;
-    height: 56px;
+  .logo-header {
+    height: 42px;
   }
 
   .whatsapp-float {
