@@ -9,13 +9,6 @@ export default function App() {
     { label: "Contact", href: "#contact" }
   ];
 
-  const stats = [
-    { value: "8+", label: "Years of Stone Experience" },
-    { value: "300+", label: "Orders Supported" },
-    { value: "20+", label: "Material Styles" },
-    { value: "100%", label: "Practical Quality Focus" }
-  ];
-
   const products = [
     {
       title: "Stone Sample Collection",
@@ -111,18 +104,19 @@ export default function App() {
     }
   ];
 
+  const stats = [
+    { value: "8+", label: "Years of Stone Experience" },
+    { value: "300+", label: "Orders Supported" },
+    { value: "20+", label: "Material Styles" },
+    { value: "100%", label: "Practical Quality Focus" }
+  ];
+
   return (
     <div className="site-shell">
       <header className="site-header site-header-overlay">
         <div className="container header-inner">
-          <a href="#home" className="brand brand-reference">
-            <img src="/logo.png" alt="GREAYSTONE logo" className="brand-logo logo-natural" />
-            <div className="brand-text">
-              <div className="brand-name brand-name-light">GREAYSTONE</div>
-              <div className="brand-subtitle brand-subtitle-light">
-                STONE PROCESSING & SUPPLY
-              </div>
-            </div>
+          <a href="#home" className="brand">
+            <img src="/logo.png" alt="GREAYSTONE" className="logo-header" />
           </a>
 
           <nav className="desktop-nav desktop-nav-light">
@@ -149,9 +143,7 @@ export default function App() {
           <div className="container">
             <div className="intro-panel">
               <div className="intro-panel-left">
-                <div className="hero-badge intro-badge">
-                  Crafted Stone. Reliable Supply.
-                </div>
+                <div className="intro-badge">Crafted Stone. Reliable Supply.</div>
 
                 <h1 className="intro-title">
                   Your Trusted Partner
@@ -178,12 +170,7 @@ export default function App() {
 
               <div className="intro-panel-right">
                 <div className="stats-grid">
-                  {[
-                    { value: "8+", label: "Years of Stone Experience" },
-                    { value: "300+", label: "Orders Supported" },
-                    { value: "20+", label: "Material Styles" },
-                    { value: "100%", label: "Practical Quality Focus" }
-                  ].map((stat) => (
+                  {stats.map((stat) => (
                     <div className="intro-stat-card" key={stat.label}>
                       <div className="intro-stat-value">{stat.value}</div>
                       <div className="intro-stat-label">{stat.label}</div>
@@ -266,7 +253,7 @@ export default function App() {
 
             <div className="product-showcase-grid">
               {products.map((item) => (
-                <article className="product-card product-card-enhanced" key={item.title}>
+                <article className="product-card" key={item.title}>
                   <div className="product-image-wrap">
                     <img src={item.image} alt={item.title} className="product-image" />
                     <div className="product-tag">{item.tag}</div>
