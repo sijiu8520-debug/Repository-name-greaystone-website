@@ -4,8 +4,16 @@ export default function App() {
     { label: "About", href: "#about" },
     { label: "Products", href: "#products" },
     { label: "Factory", href: "#factory" },
+    { label: "Projects", href: "#projects" },
     { label: "Custom Work", href: "#custom-work" },
     { label: "Contact", href: "#contact" }
+  ];
+
+  const stats = [
+    { value: "8+", label: "Years of Stone Experience" },
+    { value: "300+", label: "Orders Supported" },
+    { value: "20+", label: "Material Styles" },
+    { value: "100%", label: "Practical Quality Focus" }
   ];
 
   const products = [
@@ -17,7 +25,7 @@ export default function App() {
     },
     {
       title: "Stone Bathroom Sink",
-      desc: "Custom carved stone sink fabrication with a strong visual character and clean finishing details.",
+      desc: "Custom carved stone sink fabrication with clean finishing details and natural stone appeal.",
       image: "/products/sink.jpg",
       tag: "Custom Product"
     },
@@ -40,6 +48,29 @@ export default function App() {
     { title: "Stone Inventory", image: "/factory/factory2.jpg" },
     { title: "CNC Equipment", image: "/factory/machine.jpg" },
     { title: "Slab Storage", image: "/factory/factory3.jpg" }
+  ];
+
+  const projectItems = [
+    {
+      title: "Villa Exterior Stone",
+      desc: "Premium stone solutions for private villa exteriors and facade applications.",
+      image: "/hero.jpg"
+    },
+    {
+      title: "Custom Granite Fabrication",
+      desc: "Processed granite pieces for hardscape, municipal, and outdoor projects.",
+      image: "/products/granite1.jpg"
+    },
+    {
+      title: "Interior Marble Application",
+      desc: "Decorative and functional marble selections for interior spaces.",
+      image: "/products/samplewall.jpg"
+    },
+    {
+      title: "Bathroom Stone Product",
+      desc: "Custom sink and bathroom stone fabrication with natural pattern appeal.",
+      image: "/products/sink.jpg"
+    }
   ];
 
   const customItems = [
@@ -80,26 +111,21 @@ export default function App() {
     }
   ];
 
-  const stats = [
-    { value: "8+", label: "Years of Stone Experience" },
-    { value: "300+", label: "Orders Supported" },
-    { value: "20+", label: "Material Styles" },
-    { value: "100%", label: "Practical Quality Focus" }
-  ];
-
   return (
     <div className="site-shell">
-      <header className="site-header">
+      <header className="site-header site-header-overlay">
         <div className="container header-inner">
-          <a href="#home" className="brand">
-            <img src="/logo.png" alt="GREAYSTONE logo" className="brand-logo" />
+          <a href="#home" className="brand brand-reference">
+            <img src="/logo.png" alt="GREAYSTONE logo" className="brand-logo logo-natural" />
             <div className="brand-text">
-              <div className="brand-name">GREAYSTONE</div>
-              <div className="brand-subtitle">Stone Processing & Supply</div>
+              <div className="brand-name brand-name-light">GREAYSTONE</div>
+              <div className="brand-subtitle brand-subtitle-light">
+                STONE PROCESSING & SUPPLY
+              </div>
             </div>
           </a>
 
-          <nav className="desktop-nav">
+          <nav className="desktop-nav desktop-nav-light">
             {navItems.map((item) => (
               <a key={item.label} href={item.href}>
                 {item.label}
@@ -107,46 +133,49 @@ export default function App() {
             ))}
           </nav>
 
-          <a href="#contact" className="header-btn">
+          <a href="#contact" className="header-btn hero-header-btn">
             Get Quote
           </a>
         </div>
       </header>
 
       <main>
-        <section id="home" className="hero-section">
-          <img src="/hero.jpg" alt="Stone building project" className="hero-bg" />
-          <div className="hero-overlay" />
+        <section id="home" className="hero-section hero-reference-section">
+          <img src="/hero.jpg" alt="Luxury stone villa project" className="hero-bg" />
+          <div className="hero-overlay hero-overlay-reference" />
 
-          <div className="container hero-content">
-            <div className="hero-left">
-              <div className="hero-badge">Crafted Stone. Reliable Supply.</div>
+          <div className="container hero-content hero-content-reference">
+            <div className="hero-left hero-left-reference">
+              <div className="hero-badge hero-badge-reference">
+                Crafted Stone. Reliable Supply.
+              </div>
 
-              <h1>
+              <h1 className="hero-title-reference">
                 Your Trusted Partner
-                <span>in Stone Processing</span>
+                <span>in Building Materials</span>
               </h1>
 
-              <p>
-                GREAYSTONE is a practical stone processing and supply company built
-                on real factory experience. We specialize in custom fabrication,
-                marble and granite products, project-based support, and dependable
-                service for builders, designers, and wholesalers.
+              <div className="hero-title-line"></div>
+
+              <p className="hero-description-reference">
+                Quality stone solutions and factory-supported supply for builders,
+                wholesalers, designers, and project buyers. We specialize in granite,
+                marble, custom fabrication, and dependable project support.
               </p>
 
               <div className="hero-actions">
-                <a href="#contact" className="primary-btn">
-                  Request a Quote
+                <a href="#contact" className="primary-btn hero-primary-btn">
+                  Get a Quote
                 </a>
                 <a href="#products" className="secondary-btn">
-                  Explore Products
+                  View Products
                 </a>
               </div>
             </div>
 
-            <div className="hero-stats">
+            <div className="hero-stats hero-stats-reference">
               {stats.map((stat) => (
-                <div className="stat-card" key={stat.label}>
+                <div className="stat-card stat-card-reference" key={stat.label}>
                   <div className="stat-value">{stat.value}</div>
                   <div className="stat-label">{stat.label}</div>
                 </div>
@@ -293,6 +322,72 @@ export default function App() {
                   <div className="factory-card-title">{item.title}</div>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="projects" className="content-section white-section">
+          <div className="container">
+            <div className="section-head split-head">
+              <div>
+                <div className="section-label">Project Case</div>
+                <h2>Stone applications that reflect practical project capability.</h2>
+                <p>
+                  We support project-oriented supply with materials and fabrication
+                  suited for architectural, interior, and outdoor stone applications.
+                </p>
+              </div>
+
+              <a href="#contact" className="text-link">
+                Ask about your project →
+              </a>
+            </div>
+
+            <div className="project-grid">
+              {projectItems.map((item) => (
+                <article className="project-card" key={item.title}>
+                  <div className="project-image-wrap">
+                    <img src={item.image} alt={item.title} className="project-image" />
+                  </div>
+
+                  <div className="project-body">
+                    <h3>{item.title}</h3>
+                    <p>{item.desc}</p>
+                    <a href="#contact" className="text-link small-link">
+                      Discuss this type of project →
+                    </a>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="cta-banner-section">
+          <div className="container">
+            <div className="cta-banner">
+              <div className="cta-banner-text">
+                <div className="section-label gold-label">Quick Project Inquiry</div>
+                <h2>Need granite, marble, or custom fabrication support?</h2>
+                <p>
+                  Contact us for specifications, quotations, custom requests, and
+                  project-based supply support.
+                </p>
+              </div>
+
+              <div className="cta-banner-actions">
+                <a href="#contact" className="primary-btn dark-btn">
+                  Request a Quote
+                </a>
+                <a
+                  href="https://wa.me/12137920548?text=Hello%20I%20am%20interested%20in%20your%20stone%20products.%20Could%20you%20please%20share%20more%20details%3F"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="outline-btn cta-outline-btn"
+                >
+                  WhatsApp Us
+                </a>
+              </div>
             </div>
           </div>
         </section>
