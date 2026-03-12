@@ -115,12 +115,8 @@ export default function App() {
     <div className="site-shell">
       <header className="site-header site-header-overlay">
         <div className="container header-inner">
-          <a href="#home" className="brand brand-full">
-            <img src="/logo.png" alt="GREAYSTONE icon" className="logo-mark" />
-            <div className="brand-copy">
-              <div className="brand-name">GREAYSTONE</div>
-              <div className="brand-subtitle">STONE PROCESSING & SUPPLY</div>
-            </div>
+          <a href="#home" className="brand">
+            <img src="/logo.png" alt="GREAYSTONE" className="logo-header" />
           </a>
 
           <nav className="desktop-nav">
