@@ -68,11 +68,11 @@ img {
 }
 
 .header-inner {
-  min-height: 78px;
-  display: flex;
+  min-height: 74px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
-  justify-content: space-between;
-  gap: 24px;
+  gap: 28px;
 }
 
 .brand {
@@ -80,25 +80,64 @@ img {
   align-items: center;
 }
 
-.logo-header {
-  height: 50px;
-  width: auto;
+.brand-full {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.logo-mark {
+  width: 34px;
+  height: 34px;
   object-fit: contain;
   display: block;
+  flex-shrink: 0;
+}
+
+.brand-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  min-width: 0;
+}
+
+.brand-name {
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  color: rgba(255, 255, 255, 0.96);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.28);
+  white-space: nowrap;
+}
+
+.brand-subtitle {
+  font-size: 9px;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: 0.26em;
+  color: rgba(255, 255, 255, 0.82);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.22);
+  white-space: nowrap;
 }
 
 .desktop-nav {
   display: flex;
   align-items: center;
-  gap: 26px;
+  justify-content: center;
+  gap: 24px;
 }
 
 .desktop-nav a {
   font-size: 14px;
+  line-height: 1;
   font-weight: 700;
   color: rgba(255, 255, 255, 0.92);
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.28);
   transition: 0.2s;
+  white-space: nowrap;
 }
 
 .desktop-nav a:hover {
@@ -120,11 +159,13 @@ img {
   background: rgba(255, 255, 255, 0.16);
   border: 1px solid rgba(255, 255, 255, 0.16);
   color: #fff;
-  padding: 11px 20px;
+  padding: 10px 18px;
   border-radius: 999px;
   font-size: 14px;
+  line-height: 1;
   font-weight: 700;
   box-shadow: none;
+  white-space: nowrap;
 }
 
 .header-btn:hover {
@@ -1044,6 +1085,30 @@ img {
 }
 
 /* Responsive */
+@media (max-width: 1180px) {
+  .header-inner {
+    grid-template-columns: auto 1fr auto;
+    gap: 20px;
+  }
+
+  .desktop-nav {
+    gap: 18px;
+  }
+
+  .desktop-nav a {
+    font-size: 13px;
+  }
+
+  .brand-name {
+    font-size: 15px;
+  }
+
+  .brand-subtitle {
+    font-size: 8px;
+    letter-spacing: 0.22em;
+  }
+}
+
 @media (max-width: 1100px) {
   .intro-panel,
   .two-col,
@@ -1065,12 +1130,37 @@ img {
   }
 }
 
-@media (max-width: 820px) {
+@media (max-width: 900px) {
   .desktop-nav,
   .header-btn {
     display: none;
   }
 
+  .header-inner {
+    min-height: 70px;
+    grid-template-columns: 1fr;
+    justify-content: start;
+  }
+
+  .brand-full {
+    gap: 10px;
+  }
+
+  .logo-mark {
+    width: 32px;
+    height: 32px;
+  }
+
+  .brand-name {
+    font-size: 15px;
+  }
+
+  .brand-subtitle {
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 820px) {
   .hero-clean-section {
     height: 78vh;
     min-height: 560px;
@@ -1116,10 +1206,6 @@ img {
 
   .cta-banner-section {
     padding: 0 0 84px;
-  }
-
-  .logo-header {
-    height: 42px;
   }
 
   .whatsapp-float {
