@@ -68,7 +68,7 @@ img {
 }
 
 .header-inner {
-  min-height: 72px;
+  min-height: 86px;
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
@@ -82,7 +82,7 @@ img {
 }
 
 .logo-header {
-  height: 86px;
+  height: 106px;
   width: auto;
   object-fit: contain;
   display: block;
