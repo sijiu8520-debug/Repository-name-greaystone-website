@@ -115,11 +115,15 @@ export default function App() {
     <div className="site-shell">
       <header className="site-header site-header-overlay">
         <div className="container header-inner">
-          <a href="#home" className="brand">
-            <img src="/logo.png" alt="GREAYSTONE" className="logo-header" />
+          <a href="#home" className="brand brand-full">
+            <img src="/logo.png" alt="GREAYSTONE icon" className="logo-mark" />
+            <div className="brand-copy">
+              <div className="brand-name">GREAYSTONE</div>
+              <div className="brand-subtitle">STONE PROCESSING & SUPPLY</div>
+            </div>
           </a>
 
-          <nav className="desktop-nav desktop-nav-light">
+          <nav className="desktop-nav">
             {navItems.map((item) => (
               <a key={item.label} href={item.href}>
                 {item.label}
@@ -127,7 +131,7 @@ export default function App() {
             ))}
           </nav>
 
-          <a href="#contact" className="header-btn hero-header-btn">
+          <a href="#contact" className="header-btn">
             Get Quote
           </a>
         </div>
@@ -162,7 +166,7 @@ export default function App() {
                   <a href="#contact" className="primary-btn">
                     Get a Quote
                   </a>
-                  <a href="#products" className="secondary-btn secondary-btn-dark">
+                  <a href="#products" className="secondary-btn">
                     View Products
                   </a>
                 </div>
