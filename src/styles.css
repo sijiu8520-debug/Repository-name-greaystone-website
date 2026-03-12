@@ -45,7 +45,6 @@ img {
   margin: 0 auto;
 }
 
-/* Header */
 .site-header {
   position: sticky;
   top: 0;
@@ -138,7 +137,6 @@ img {
   background: #23447f;
 }
 
-/* Hero */
 .hero-section {
   position: relative;
   min-height: 860px;
@@ -292,7 +290,6 @@ img {
   font-size: 14px;
 }
 
-/* Floating strip */
 .floating-strip-wrap {
   position: relative;
   margin-top: -74px;
@@ -322,7 +319,6 @@ img {
   line-height: 1.8;
 }
 
-/* Section base */
 .content-section {
   padding: 110px 0;
 }
@@ -454,7 +450,6 @@ img {
   font-size: 14px;
 }
 
-/* Product cards */
 .four-grid {
   grid-template-columns: repeat(4, 1fr);
   margin-top: 52px;
@@ -567,7 +562,6 @@ img {
   color: #475569;
 }
 
-/* Factory */
 .factory-featured {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
@@ -670,7 +664,6 @@ img {
   color: #0f172a;
 }
 
-/* Project grid */
 .project-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -721,7 +714,6 @@ img {
   color: #64748b;
 }
 
-/* CTA Banner */
 .cta-banner-section {
   padding: 0 0 110px;
   background: #ffffff;
@@ -770,7 +762,6 @@ img {
   background: rgba(255, 255, 255, 0.14);
 }
 
-/* Dark sections */
 .dark-section {
   background: var(--blue-2);
 }
@@ -797,7 +788,6 @@ img {
   color: rgba(255,255,255,0.76);
 }
 
-/* Strength */
 .strength-panel {
   border-radius: 38px;
   padding: 56px;
@@ -829,12 +819,10 @@ img {
   color: rgba(255,255,255,0.82);
 }
 
-/* Work style */
 .work-grid {
   grid-template-columns: repeat(2, 1fr);
 }
 
-/* Contact */
 .contact-section {
   position: relative;
   overflow: hidden;
@@ -964,7 +952,6 @@ img {
   background: #f8fafc;
 }
 
-/* WhatsApp */
 .whatsapp-float {
   position: fixed;
   right: 24px;
@@ -1038,18 +1025,12 @@ img {
   letter-spacing: 0.04em;
 }
 
-/* Footer */
 .site-footer {
   background: #0b1730;
   color: rgba(255,255,255,0.6);
   text-align: center;
   padding: 24px 20px;
   font-size: 14px;
-}
-
-/* Reference-style hero */
-.hero-reference-style {
-  background: #f4f5f7;
 }
 
 .site-header-overlay {
@@ -1216,7 +1197,6 @@ img {
   color: rgba(255, 255, 255, 0.86);
 }
 
-/* Responsive */
 @media (max-width: 1100px) {
   .hero-content,
   .two-col,
