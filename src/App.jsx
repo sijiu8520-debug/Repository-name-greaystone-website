@@ -409,7 +409,7 @@ export default function App() {
               <input
                 type="hidden"
                 name="_next"
-                value="https://your-vercel-domain.vercel.app/thank-you.html"
+                value="https://repository-name-greaystone-website.vercel.app/thank-you.html"
               />
 
               <div className="form-head">
