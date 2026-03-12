@@ -315,7 +315,7 @@ export default function App() {
 
             <div className="factory-gallery-grid">
               {factoryItems.map((item) => (
-                <div className="factory-card refined-factory-card" key={item.title}>
+                <div className="factory-card" key={item.title}>
                   <img src={item.image} alt={item.title} />
                   <div className="factory-card-title">{item.title}</div>
                 </div>
