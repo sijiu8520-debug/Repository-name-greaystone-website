@@ -68,59 +68,24 @@ img {
 }
 
 .header-inner {
-  min-height: 74px;
+  min-height: 76px;
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
-  gap: 28px;
+  gap: 24px;
 }
 
 .brand {
   display: flex;
   align-items: center;
-}
-
-.brand-full {
-  display: flex;
-  align-items: center;
-  gap: 12px;
   min-width: 0;
 }
 
-.logo-mark {
-  width: 34px;
-  height: 34px;
+.logo-header {
+  height: 66px;
+  width: auto;
   object-fit: contain;
   display: block;
-  flex-shrink: 0;
-}
-
-.brand-copy {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 4px;
-  min-width: 0;
-}
-
-.brand-name {
-  font-size: 16px;
-  line-height: 1;
-  font-weight: 800;
-  letter-spacing: 0.16em;
-  color: rgba(255, 255, 255, 0.96);
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.28);
-  white-space: nowrap;
-}
-
-.brand-subtitle {
-  font-size: 9px;
-  line-height: 1;
-  font-weight: 700;
-  letter-spacing: 0.26em;
-  color: rgba(255, 255, 255, 0.82);
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.22);
-  white-space: nowrap;
 }
 
 .desktop-nav {
@@ -1086,11 +1051,6 @@ img {
 
 /* Responsive */
 @media (max-width: 1180px) {
-  .header-inner {
-    grid-template-columns: auto 1fr auto;
-    gap: 20px;
-  }
-
   .desktop-nav {
     gap: 18px;
   }
@@ -1099,13 +1059,8 @@ img {
     font-size: 13px;
   }
 
-  .brand-name {
-    font-size: 15px;
-  }
-
-  .brand-subtitle {
-    font-size: 8px;
-    letter-spacing: 0.22em;
+  .logo-header {
+    height: 60px;
   }
 }
 
@@ -1142,21 +1097,8 @@ img {
     justify-content: start;
   }
 
-  .brand-full {
-    gap: 10px;
-  }
-
-  .logo-mark {
-    width: 32px;
-    height: 32px;
-  }
-
-  .brand-name {
-    font-size: 15px;
-  }
-
-  .brand-subtitle {
-    font-size: 8px;
+  .logo-header {
+    height: 56px;
   }
 }
 
@@ -1206,6 +1148,10 @@ img {
 
   .cta-banner-section {
     padding: 0 0 84px;
+  }
+
+  .logo-header {
+    height: 52px;
   }
 
   .whatsapp-float {
