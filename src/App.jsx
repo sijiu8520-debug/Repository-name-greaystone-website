@@ -1,7 +1,7 @@
 export default function App() {
   const navItems = [
     { label: "Home", href: "#home" },
-    { label: "About", href: "#about" },
+    { label: "About", href: "#about-intro" },
     { label: "Products", href: "#products" },
     { label: "Factory", href: "#factory" },
     { label: "Projects", href: "#projects" },
@@ -140,51 +140,62 @@ export default function App() {
       </header>
 
       <main>
-        <section id="home" className="hero-section hero-reference-section">
+        <section id="home" className="hero-clean-section">
           <img src="/hero.jpg" alt="Luxury stone villa project" className="hero-bg" />
-          <div className="hero-overlay hero-overlay-reference" />
+          <div className="hero-clean-overlay" />
+        </section>
 
-          <div className="container hero-content hero-content-reference">
-            <div className="hero-left hero-left-reference">
-              <div className="hero-badge hero-badge-reference">
-                Crafted Stone. Reliable Supply.
-              </div>
-
-              <h1 className="hero-title-reference">
-                Your Trusted Partner
-                <span>in Building Materials</span>
-              </h1>
-
-              <div className="hero-title-line"></div>
-
-              <p className="hero-description-reference">
-                Quality stone solutions and factory-supported supply for builders,
-                wholesalers, designers, and project buyers. We specialize in granite,
-                marble, custom fabrication, and dependable project support.
-              </p>
-
-              <div className="hero-actions">
-                <a href="#contact" className="primary-btn hero-primary-btn">
-                  Get a Quote
-                </a>
-                <a href="#products" className="secondary-btn">
-                  View Products
-                </a>
-              </div>
-            </div>
-
-            <div className="hero-stats hero-stats-reference">
-              {stats.map((stat) => (
-                <div className="stat-card stat-card-reference" key={stat.label}>
-                  <div className="stat-value">{stat.value}</div>
-                  <div className="stat-label">{stat.label}</div>
+        <section id="about-intro" className="intro-panel-wrap">
+          <div className="container">
+            <div className="intro-panel">
+              <div className="intro-panel-left">
+                <div className="hero-badge intro-badge">
+                  Crafted Stone. Reliable Supply.
                 </div>
-              ))}
+
+                <h1 className="intro-title">
+                  Your Trusted Partner
+                  <span>in Building Materials</span>
+                </h1>
+
+                <div className="intro-title-line"></div>
+
+                <p className="intro-description">
+                  Quality stone solutions and factory-supported supply for builders,
+                  wholesalers, designers, and project buyers. We specialize in granite,
+                  marble, custom fabrication, and dependable project support.
+                </p>
+
+                <div className="hero-actions">
+                  <a href="#contact" className="primary-btn">
+                    Get a Quote
+                  </a>
+                  <a href="#products" className="secondary-btn secondary-btn-dark">
+                    View Products
+                  </a>
+                </div>
+              </div>
+
+              <div className="intro-panel-right">
+                <div className="stats-grid">
+                  {[
+                    { value: "8+", label: "Years of Stone Experience" },
+                    { value: "300+", label: "Orders Supported" },
+                    { value: "20+", label: "Material Styles" },
+                    { value: "100%", label: "Practical Quality Focus" }
+                  ].map((stat) => (
+                    <div className="intro-stat-card" key={stat.label}>
+                      <div className="intro-stat-value">{stat.value}</div>
+                      <div className="intro-stat-label">{stat.label}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
-        <section className="floating-strip-wrap">
+        <section className="floating-strip-wrap clean-strip-wrap">
           <div className="container">
             <div className="floating-strip">
               <div className="strip-card">
