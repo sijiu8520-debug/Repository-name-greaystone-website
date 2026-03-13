@@ -45,7 +45,6 @@ img {
   margin: 0 auto;
 }
 
-/* Header */
 .site-header {
   position: sticky;
   top: 0;
@@ -59,43 +58,48 @@ img {
   width: 100%;
   background: linear-gradient(
     180deg,
-    rgba(10, 18, 38, 0.22),
-    rgba(10, 18, 38, 0.03)
+    rgba(10, 18, 38, 0.28),
+    rgba(10, 18, 38, 0.05)
   );
-  border-bottom: none;
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(4px);
   z-index: 1000;
 }
 
 .header-inner {
   min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
 }
 
 .brand {
   display: flex;
   align-items: center;
-  min-width: 0;
+  flex: 0 0 auto;
 }
 
 .logo-header {
-  height: 40px;
+  height: 42px;
   width: auto;
   object-fit: contain;
+  display: block;
 }
 
 .desktop-nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 24px;
+  gap: 34px;
+  flex: 1 1 auto;
 }
 
 .desktop-nav a {
   font-size: 14px;
   line-height: 1;
   font-weight: 700;
-  color: rgba(255, 255, 255, 0.92);
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.28);
+  color: rgba(255, 255, 255, 0.94);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
   transition: 0.2s;
   white-space: nowrap;
 }
@@ -116,23 +120,22 @@ img {
 }
 
 .header-btn {
-  background: rgba(255, 255, 255, 0.16);
-  border: 1px solid rgba(255, 255, 255, 0.16);
+  flex: 0 0 auto;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   color: #fff;
-  padding: 10px 18px;
+  padding: 10px 20px;
   border-radius: 999px;
   font-size: 14px;
   line-height: 1;
   font-weight: 700;
-  box-shadow: none;
   white-space: nowrap;
 }
 
 .header-btn:hover {
-  background: rgba(255, 255, 255, 0.24);
+  background: rgba(255, 255, 255, 0.22);
 }
 
-/* Hero */
 .hero-clean-section {
   position: relative;
   height: 100vh;
@@ -162,12 +165,11 @@ img {
     linear-gradient(
       90deg,
       rgba(9, 18, 36, 0.06) 0%,
-      rgba(9, 18, 36, 0.00) 42%,
-      rgba(255, 255, 255, 0.00) 100%
+      rgba(9, 18, 36, 0) 42%,
+      rgba(255, 255, 255, 0) 100%
     );
 }
 
-/* Intro panel */
 .intro-panel-wrap {
   position: relative;
   margin-top: -84px;
@@ -197,7 +199,7 @@ img {
   padding: 10px 16px;
   border-radius: 999px;
   background: rgba(24, 53, 103, 0.08);
-  border: 1px solid rgba(24, 53, 103, 0.10);
+  border: 1px solid rgba(24, 53, 103, 0.1);
   color: #183567;
   font-size: 12px;
   margin-bottom: 24px;
@@ -291,7 +293,7 @@ img {
   border-radius: 24px;
   background: rgba(24, 53, 103, 0.05);
   border: 1px solid rgba(24, 53, 103, 0.08);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.58);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.58);
 }
 
 .intro-stat-value {
@@ -308,7 +310,6 @@ img {
   font-weight: 600;
 }
 
-/* Floating strip */
 .floating-strip-wrap {
   position: relative;
   z-index: 5;
@@ -324,10 +325,10 @@ img {
   gap: 18px;
   padding: 22px;
   border-radius: 34px;
-  background: rgba(255,255,255,0.88);
-  border: 1px solid rgba(255,255,255,0.75);
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.75);
   backdrop-filter: blur(16px);
-  box-shadow: 0 30px 80px rgba(15,31,63,0.12);
+  box-shadow: 0 30px 80px rgba(15, 31, 63, 0.12);
 }
 
 .strip-card {
@@ -341,7 +342,6 @@ img {
   line-height: 1.8;
 }
 
-/* Sections */
 .content-section {
   padding: 110px 0;
 }
@@ -365,7 +365,7 @@ img {
   position: relative;
   overflow: hidden;
   border-radius: 36px;
-  box-shadow: 0 30px 70px rgba(15,31,63,0.12);
+  box-shadow: 0 30px 70px rgba(15, 31, 63, 0.12);
 }
 
 .large-panel img {
@@ -377,7 +377,7 @@ img {
   position: absolute;
   left: 20px;
   bottom: 20px;
-  background: rgba(255,255,255,0.9);
+  background: rgba(255, 255, 255, 0.9);
   padding: 16px 18px;
   border-radius: 20px;
   box-shadow: var(--shadow);
@@ -450,7 +450,7 @@ img {
   font-size: 14px;
   font-weight: 700;
   color: #374151;
-  box-shadow: 0 8px 20px rgba(15,31,63,0.04);
+  box-shadow: 0 8px 20px rgba(15, 31, 63, 0.04);
 }
 
 .split-head {
@@ -474,7 +474,6 @@ img {
   font-size: 14px;
 }
 
-/* Products */
 .product-showcase-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -484,16 +483,16 @@ img {
 
 .product-card {
   background: white;
-  border: 1px solid rgba(229,231,235,0.9);
+  border: 1px solid rgba(229, 231, 235, 0.9);
   border-radius: 32px;
   overflow: hidden;
-  box-shadow: 0 18px 45px rgba(15,31,63,0.08);
+  box-shadow: 0 18px 45px rgba(15, 31, 63, 0.08);
   transition: 0.28s ease;
 }
 
 .product-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 28px 60px rgba(15,31,63,0.14);
+  box-shadow: 0 28px 60px rgba(15, 31, 63, 0.14);
 }
 
 .product-image-wrap {
@@ -511,7 +510,7 @@ img {
   position: absolute;
   left: 16px;
   top: 16px;
-  background: rgba(255,255,255,0.88);
+  background: rgba(255, 255, 255, 0.88);
   backdrop-filter: blur(8px);
   color: var(--blue);
   border-radius: 999px;
@@ -565,7 +564,6 @@ img {
   color: #475569;
 }
 
-/* Factory */
 .factory-featured {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
@@ -668,7 +666,6 @@ img {
   color: #0f172a;
 }
 
-/* Projects */
 .project-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -705,7 +702,6 @@ img {
   padding: 24px;
 }
 
-/* CTA */
 .cta-banner-section {
   padding: 0 0 110px;
   background: #ffffff;
@@ -754,7 +750,6 @@ img {
   background: rgba(255, 255, 255, 0.14);
 }
 
-/* Dark sections */
 .dark-section {
   background: var(--blue-2);
 }
@@ -764,8 +759,8 @@ img {
 }
 
 .dark-card {
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 30px;
   overflow: hidden;
 }
@@ -780,15 +775,14 @@ img {
 }
 
 .dark-card-body p {
-  color: rgba(255,255,255,0.76);
+  color: rgba(255, 255, 255, 0.76);
 }
 
-/* Strength */
 .strength-panel {
   border-radius: 38px;
   padding: 56px;
   background: linear-gradient(135deg, #1d3768, #203d72, #122246);
-  box-shadow: 0 30px 80px rgba(15,31,63,0.18);
+  box-shadow: 0 30px 80px rgba(15, 31, 63, 0.18);
 }
 
 .strength-grid {
@@ -799,8 +793,8 @@ img {
 .strength-card {
   border-radius: 28px;
   padding: 28px;
-  background: rgba(255,255,255,0.1);
-  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .strength-number {
@@ -812,15 +806,13 @@ img {
 }
 
 .strength-card p {
-  color: rgba(255,255,255,0.82);
+  color: rgba(255, 255, 255, 0.82);
 }
 
-/* Work */
 .work-grid {
   grid-template-columns: repeat(2, 1fr);
 }
 
-/* Contact */
 .contact-section {
   position: relative;
   overflow: hidden;
@@ -832,8 +824,8 @@ img {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at top right, rgba(242,212,123,0.18), transparent 24%),
-    radial-gradient(circle at bottom left, rgba(255,255,255,0.08), transparent 20%);
+    radial-gradient(circle at top right, rgba(242, 212, 123, 0.18), transparent 24%),
+    radial-gradient(circle at bottom left, rgba(255, 255, 255, 0.08), transparent 20%);
 }
 
 .contact-grid {
@@ -860,14 +852,14 @@ img {
 .contact-card {
   border-radius: 22px;
   padding: 20px;
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(8px);
 }
 
 .contact-card-label {
   font-size: 12px;
-  color: rgba(255,255,255,0.5);
+  color: rgba(255, 255, 255, 0.5);
   text-transform: uppercase;
   letter-spacing: 0.24em;
   font-weight: 800;
@@ -886,11 +878,11 @@ img {
 }
 
 .inquiry-form {
-  background: rgba(255,255,255,0.96);
+  background: rgba(255, 255, 255, 0.96);
   color: #0f172a;
   border-radius: 34px;
   padding: 32px;
-  box-shadow: 0 30px 80px rgba(0,0,0,0.22);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.22);
 }
 
 .form-head {
@@ -933,7 +925,7 @@ img {
 .inquiry-form input:focus,
 .inquiry-form textarea:focus {
   border-color: var(--blue);
-  box-shadow: 0 0 0 4px rgba(24,53,103,0.1);
+  box-shadow: 0 0 0 4px rgba(24, 53, 103, 0.1);
 }
 
 .form-actions {
@@ -961,7 +953,6 @@ img {
   background: #f8fafc;
 }
 
-/* WhatsApp */
 .whatsapp-float {
   position: fixed;
   right: 24px;
@@ -1035,27 +1026,21 @@ img {
   letter-spacing: 0.04em;
 }
 
-/* Footer */
 .site-footer {
   background: #0b1730;
-  color: rgba(255,255,255,0.6);
+  color: rgba(255, 255, 255, 0.6);
   text-align: center;
   padding: 24px 20px;
   font-size: 14px;
 }
 
-/* Responsive */
 @media (max-width: 1180px) {
   .desktop-nav {
-    gap: 18px;
-  }
-
-  .desktop-nav a {
-    font-size: 13px;
+    gap: 22px;
   }
 
   .logo-header {
-    height: 60px;
+    height: 38px;
   }
 }
 
@@ -1087,13 +1072,12 @@ img {
   }
 
   .header-inner {
-    min-height: 70px;
-    grid-template-columns: 1fr;
-    justify-content: start;
+    min-height: 68px;
+    justify-content: flex-start;
   }
 
   .logo-header {
-    height: 56px;
+    height: 36px;
   }
 }
 
@@ -1146,7 +1130,7 @@ img {
   }
 
   .logo-header {
-    height: 52px;
+    height: 34px;
   }
 
   .whatsapp-float {
